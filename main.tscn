@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqc7tijv3djgh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_2dps0"]
+[ext_resource type="Texture2D" uid="uid://bc3w0vixfpp7q" path="res://Sprites/BG1_S.png" id="1_va1yl"]
+[ext_resource type="Texture2D" uid="uid://cx7bsnrs6xrnb" path="res://Sprites/BG2_S.png" id="2_7n883"]
+[ext_resource type="PackedScene" uid="uid://bilbcse75ip24" path="res://blood_particle.tscn" id="2_q43wq"]
+[ext_resource type="Texture2D" uid="uid://cgqpj8wrclnjb" path="res://Sprites/BG3_S.png" id="3_1fr8p"]
+[ext_resource type="PackedScene" uid="uid://f26nxw8re1po" path="res://platform.tscn" id="5_67njb"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_2dps0")
+Blood = ExtResource("2_q43wq")
+
+[node name="Background" type="Marker2D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("1_va1yl")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+texture = ExtResource("2_7n883")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+texture = ExtResource("3_1fr8p")
+centered = false
+
+[node name="Platforms" type="Marker2D" parent="."]
+
+[node name="Platform" parent="." instance=ExtResource("5_67njb")]
+position = Vector2(188, 164)
+
+[node name="Platform2" parent="." instance=ExtResource("5_67njb")]
+position = Vector2(723, 143)
+
+[node name="Platform3" parent="." instance=ExtResource("5_67njb")]
+position = Vector2(366, 355)
+
+[node name="Platform4" parent="." instance=ExtResource("5_67njb")]
+position = Vector2(666, 338)

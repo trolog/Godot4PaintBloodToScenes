@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c16ahycdowt34"]
+
+[ext_resource type="Texture2D" uid="uid://rlpva8arymo" path="res://Sprites/block.png" id="1_rssvu"]
+[ext_resource type="Script" path="res://surface.gd" id="2_vqm2j"]
+
+[node name="Surface" type="Sprite2D"]
+z_index = 4096
+texture = ExtResource("1_rssvu")
+centered = false
+script = ExtResource("2_vqm2j")

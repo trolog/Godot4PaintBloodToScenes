@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bilbcse75ip24"]
+
+[ext_resource type="Script" path="res://blood_particle.gd" id="1_k2rc6"]
+[ext_resource type="Texture2D" uid="uid://dxarrhmwshdrv" path="res://Sprites/blood.png" id="2_eqwtt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtmuo"]
+size = Vector2(1.5, 1.5)
+
+[node name="BloodParticle" type="Area2D"]
+script = ExtResource("1_k2rc6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_eqwtt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jtmuo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
